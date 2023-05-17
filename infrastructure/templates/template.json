@@ -57,12 +57,12 @@
       "location": "[parameters('location')]",
       "kind": "web",
       "sku": {
-        "name": "[parameters('sku')]",
+        "name": "[parameters('sku')]"
       },
       "dependsOn": [],
       "properties": {
         "reserved": true,
-        "targetWorkerCount": 1,
+        "targetWorkerCount": 1
       }
     },
     {
@@ -70,6 +70,7 @@
       "apiVersion": "2021-02-01",
       "name": "[parameters('webAppName')]",
       "location": "[parameters('location')]",
+      "kind": "web",
       "properties": {
         "enabled": true,
         "reserved": true,
