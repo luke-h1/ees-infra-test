@@ -36,11 +36,6 @@ jobs:
           workingDir: '.'
           verbose: false
           customCommand: 'run bootstrap'
-      - script: 'npm audit --json >> audit.json'
-        workingDirectory: 'src/explore-education-statistics-frontend'
-        displayName: 'Run npm audit'
-        continueOnError: true
-        enabled: false
 
       - task: 'Npm@1'
         displayName: 'Build frontend'
