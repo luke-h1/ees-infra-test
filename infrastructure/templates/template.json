@@ -81,7 +81,7 @@
         "remoteDebuggingEnabled": false,
         "httpLoggingEnabled": true,
         "detailedErrorLoggingEnabled": true,
-        "requestTracingEnabled": true
+        "requestTracingEnabled": true,
         "netFrameworkVersion": "v6.0",
         "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanPortalName'))]",
         "siteConfig": {
