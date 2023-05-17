@@ -74,6 +74,15 @@
         "enabled": true,
         "reserved": true,
         "httpsOnly": true,
+        "http20Enabled": true,
+        "ftpsState": "FtpsOnly",
+        "phpVersion": "off",
+        "webSocketsEnabled": false,
+        "remoteDebuggingEnabled": false,
+        "httpLoggingEnabled": true,
+        "detailedErrorLoggingEnabled": true,
+        "requestTracingEnabled": true
+        "netFrameworkVersion": "v6.0",
         "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanPortalName'))]",
         "siteConfig": {
           "alwaysOn": true,
