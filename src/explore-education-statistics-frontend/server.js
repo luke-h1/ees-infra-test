@@ -16,12 +16,10 @@ if (process.env.APPINSIGHTS_INSTRUMENTATIONKEY) {
     .start();
 }
 
-const basicAuth = require('express-basic-auth');
 const express = require('express');
 const helmet = require('helmet');
 const nextApp = require('next');
 const { loadEnvConfig } = require('@next/env');
-const path = require('path');
 const referrerPolicy = require('referrer-policy');
 
 loadEnvConfig(__dirname);
@@ -89,21 +87,6 @@ async function startServer(port = process.env.PORT || 3000) {
     }),
   );
   server.use(referrerPolicy({ policy: 'no-referrer-when-downgrade' }));
-
-  if (process.env.BASIC_AUTH === 'true') {
-    server.use(
-      '/_next/static',
-      express.static(path.resolve(__dirname, 'src/.next/static')),
-    );
-    server.use(
-      basicAuth({
-        users: {
-          [process.env.BASIC_AUTH_USERNAME]: process.env.BASIC_AUTH_PASSWORD,
-        },
-        challenge: true,
-      }),
-    );
-  }
 
   server.get('*', (req, res) => handleRequest(req, res));
   server.post('*', (req, res) => handleRequest(req, res));

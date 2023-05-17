@@ -68,6 +68,7 @@
       "apiVersion": "2021-02-01",
       "name": "[parameters('webAppName')]",
       "location": "[parameters('location')]",
+      "kind": "app",
       "properties": {
         "enabled": true,
         "reserved": true,
