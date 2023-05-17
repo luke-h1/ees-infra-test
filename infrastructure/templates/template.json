@@ -102,9 +102,7 @@
       ],
       "properties": {
         "APP_ENV": "development",
-        "BASIC_AUTH": true,
-        "BASIC_AUTH_USERNAME": "[parameters('publicAppBasicAuthUsername')]",
-        "BASIC_AUTH_PASSWORD": "[parameters('publicAppBasicAuthPassword')]",
+        "BASIC_AUTH": false,
         "CONTENT_API_BASE_URL": "[parameters('contentApiUrl')]",
         "DATA_API_BASE_URL": "[parameters('dataApiUrl')]",
         "NOTIFICATION_API_BASE_URL": "[parameters('notifyApiUrl')]",
