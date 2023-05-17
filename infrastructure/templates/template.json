@@ -51,6 +51,7 @@
   },
   "resources": [
     {
+      "kind": "app",
       "type": "Microsoft.Web/serverfarms",
       "apiVersion": "2021-02-01",
       "name": "[variables('appServicePlanPortalName')]",
