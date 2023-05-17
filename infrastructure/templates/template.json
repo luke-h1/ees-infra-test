@@ -51,7 +51,6 @@
   },
   "resources": [
     {
-      "kind": "app",
       "type": "Microsoft.Web/serverfarms",
       "apiVersion": "2021-02-01",
       "name": "[variables('appServicePlanPortalName')]",
@@ -61,15 +60,15 @@
       },
       "dependsOn": [],
       "properties": {
-        "reserved": true
-      }
+        "reserved": true,
+        "targetWorkerCount": 1
+      },
     },
     {
       "type": "Microsoft.Web/sites",
       "apiVersion": "2021-02-01",
       "name": "[parameters('webAppName')]",
       "location": "[parameters('location')]",
-      "kind": "app",
       "properties": {
         "enabled": true,
         "reserved": true,
@@ -87,11 +86,12 @@
         "siteConfig": {
           "alwaysOn": true,
           "minTlsVersion": "1.2",
+          "windowsFxVersion": "DOTNETCORE|6.0",
           "ftpsState": "FtpsOnly",
           "nodeVersion": "16-lts",
           "WEBSITES_PORT": 3000,
           "WEBSITES_ENABLE_APP_SERVICE_STORAGE": true,
-          "WEBSITE_RUN_FROM_PACKAGE": "1"
+          "WEBSITE_RUN_FROM_PACKAGE": "1",
         }
       },
       "identity": {
