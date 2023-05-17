@@ -58,6 +58,7 @@
       "sku": {
         "name": "[parameters('sku')]"
       },
+      "kind": "linux",
       //   "kind": "app,linux,container",
       "dependsOn": [],
       "properties": {
@@ -68,7 +69,7 @@
       "type": "Microsoft.Web/sites",
       "apiVersion": "2021-02-01",
       "name": "[parameters('webAppName')]",
-      // "kind": "app,linux,container",
+      "kind": "linux",
       "location": "[parameters('location')]",
       "properties": {
         "enabled": true,
