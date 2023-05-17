@@ -62,7 +62,7 @@
       "properties": {
         "reserved": true,
         "targetWorkerCount": 1
-      },
+      }
     },
     {
       "type": "Microsoft.Web/sites",
@@ -91,7 +91,7 @@
           "nodeVersion": "16-lts",
           "WEBSITES_PORT": 3000,
           "WEBSITES_ENABLE_APP_SERVICE_STORAGE": true,
-          "WEBSITE_RUN_FROM_PACKAGE": "1",
+          "WEBSITE_RUN_FROM_PACKAGE": "1"
         }
       },
       "identity": {
